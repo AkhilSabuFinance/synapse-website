@@ -420,7 +420,7 @@ html[data-theme="light"] .hero-visual {
   font-weight: 650;
   line-height: 1.1;
   border-bottom: 1px solid var(--line-strong);
-  padding: 0 0 3px;
+  padding: 0 0 1px;
   background: transparent;
   transition: color 160ms ease, border-color 160ms ease;
 }
@@ -1143,7 +1143,7 @@ html[data-theme="light"] .hero-visual {
   }
 
   .text-link {
-    padding-bottom: 3px;
+    padding-bottom: 1px;
   }
 
   .hero-intro,
