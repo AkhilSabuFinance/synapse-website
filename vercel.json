@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/(problem|solution|interface|token|background|waitlist)",
+      "source": "/(problem|solution|interface|token|waitlist)",
       "destination": "/index.html"
     }
   ]
