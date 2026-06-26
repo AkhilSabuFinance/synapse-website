@@ -114,7 +114,10 @@ img {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 68%, transparent);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 50%, transparent);
 }
 
 
