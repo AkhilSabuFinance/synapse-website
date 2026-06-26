@@ -169,8 +169,10 @@ img {
 
 .syna-title-link {
   color: var(--accent);
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 2px;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
   transition: opacity 160ms ease;
 }
 
