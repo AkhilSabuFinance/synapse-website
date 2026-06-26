@@ -780,6 +780,11 @@ html[data-theme="light"] .hero-visual {
   min-height: 1em;
 }
 
+.token-dex {
+  grid-column: 1 / -1;
+  margin-top: -20px;
+}
+
 .token-layout {
   display: grid;
   gap: 18px;
