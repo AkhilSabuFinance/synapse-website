@@ -8,7 +8,7 @@
       content="Synapse is an ownership layer for human physiological data, built for cleaner insights, consented data licensing, and researcher contracts."
     >
     <title>Synapse | Human Data Infrastructure</title>
-    <link rel="preload" href="assets/synapse-hero-data-sphere.png" as="image">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -17,7 +17,6 @@
     <div class="announcement" role="banner">
       <a href="https://x.com/synapseneuro_ai" target="_blank" rel="noopener" aria-label="Follow Synapse on X (opens in a new tab)">
         Stay up to date, follow @synapseneuro_ai on X
-        <span aria-hidden="true">→</span>
       </a>
     </div>
 
@@ -27,47 +26,48 @@
           <span>Synapse</span>
         </a>
 
-        <nav class="nav-links" aria-label="Primary navigation" data-nav>
-          <a href="/problem">Problem</a>
-          <a href="/solution">Solution</a>
-          <a href="/interface">Interface</a>
-          <a href="/token">Token</a>
-        </nav>
-
-        <div class="header-actions">
-          <a href="/waitlist" class="nav-waitlist">Join Waitlist</a>
-          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode">
-          </button>
-          <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-          </button>
+        <div class="nav-drawer" data-nav>
+          <nav class="nav-links" aria-label="Primary navigation">
+            <a href="/problem">Problem</a>
+            <a href="/solution">Solution</a>
+            <a href="/interface">Interface</a>
+            <a href="/token">Token</a>
+          </nav>
+          <div class="nav-drawer-actions">
+            <a href="/waitlist" class="nav-waitlist">Join Waitlist</a>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode">
+            </button>
+          </div>
         </div>
+
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
     <main id="main">
       <section class="hero section" id="top" aria-labelledby="hero-title">
-        <div class="hero-visual" aria-hidden="true">
-          <img src="assets/synapse-hero-data-sphere.png" alt="">
+        <div class="hero-visual" aria-hidden="true" data-hero-visual>
+          <img src="assets/synapse-hero-data-sphere.png" alt="" decoding="async">
         </div>
         <div class="shell hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Human data infrastructure</p>
+          <div class="hero-copy hero-reveal">
             <h1 id="hero-title">Own the dataset your biology creates.</h1>
           </div>
 
-          <div class="hero-lower">
+          <div class="hero-lower hero-reveal hero-reveal-delay">
             <p class="hero-intro">
               Your biology produces a dataset more valuable than anything you will create at a desk.
-              Right now it is scattered, gated, and monetized without you. Synapse turns physiological signals
-              into owned insights, actionables, and consented research opportunities.
+              Right now it is scattered, gated, and monetised without you. Synapse turns your physiological
+              signals into owned insights, clear actions, and consented research opportunities.
             </p>
 
             <div class="hero-actions">
-              <div class="hero-proof" aria-label="Brought to you by">
+              <div class="hero-proof" aria-label="Built by people from">
                 <div class="proof-heading">
-                  <span>Brought to you by those at</span>
+                  <span>Built by people from</span>
                 </div>
                 <div class="logo-strip" aria-label="Associated institutions">
                   <img class="logo-easya" src="assets/easya-logo.svg" alt="EasyA">
@@ -159,10 +159,11 @@
           <div class="section-main">
             <h2 id="interface-title">A cleaner command surface for your biology.</h2>
             <p class="section-copy">
-              The refreshed Synapse interface is being rebuilt around ingestion, consent, insight, and action instead of wellness noise.
+              The Synapse interface is built around ingestion, consent, insight, and action, not wellness noise.
             </p>
           </div>
           <div class="section-wide">
+            <p class="coming-soon">App coming soon</p>
             <div class="interface-feature">
               <article class="interface-strip">
                 <div class="interface-strip-num" aria-hidden="true">01</div>
@@ -178,7 +179,7 @@
                   <p>Signal provenance, trends, and context presented as clear insights instead of raw dashboards.</p>
                 </div>
               </article>
-              <article class="interface-strip interface-strip-accent">
+              <article class="interface-strip">
                 <div class="interface-strip-num" aria-hidden="true">03</div>
                 <div>
                   <h3>Act or consent</h3>
@@ -196,39 +197,43 @@
           <div class="section-main">
             <h2 id="token-title"><a class="syna-title-link" href="https://kickstart.easya.io/token/HA4WtRuNrjtrzAWTTjCyTZn94Jq9ggV6iraW7SndSLyz" target="_blank" rel="noopener">$SYNA</a> aligns access, contribution, and ownership.</h2>
             <p class="section-copy">
-              Hold $SYNA to participate deeper in the network: community airdrops driven by overall community
-              participation and performance, access to higher-value research contracts, and member-only health,
-              data, and performance offers.
+              Hold $SYNA to participate deeper in the network: airdrops, buybacks, higher-value research
+              contracts, and member-only offers.
             </p>
-          </div>
-          <div class="token-dex">
-            <a class="text-link strong" href="https://dexscreener.com/solana/6znejzejrdj73kknpcnf5zmxkmivmdn5pjhgtcykuvde" target="_blank" rel="noopener">
-              View on DexScreener ↗
-            </a>
-            <a class="text-link strong" href="https://kickstart.easya.io/token/HA4WtRuNrjtrzAWTTjCyTZn94Jq9ggV6iraW7SndSLyz" target="_blank" rel="noopener">
-              View on EasyA Kickstart ↗
-            </a>
+            <div class="token-dex">
+              <a class="text-link strong" href="https://dexscreener.com/solana/6znejzejrdj73kknpcnf5zmxkmivmdn5pjhgtcykuvde" target="_blank" rel="noopener">
+                View on DexScreener ↗
+              </a>
+              <a class="text-link strong" href="https://kickstart.easya.io/token/HA4WtRuNrjtrzAWTTjCyTZn94Jq9ggV6iraW7SndSLyz" target="_blank" rel="noopener">
+                View on EasyA Kickstart ↗
+              </a>
+            </div>
           </div>
           <div class="section-wide token-layout">
             <div class="token-feature" aria-label="$SYNA token utility">
               <div class="token-item">
                 <div class="token-num" aria-hidden="true">01</div>
                 <strong class="token-label">Airdrops</strong>
-                <p>Distributed to $SYNA holders as the Synapse network grows.</p>
+                <p>Random airdrops weighted toward holders with more complete data vaults and active insight usage.</p>
               </div>
               <div class="token-item">
                 <div class="token-num" aria-hidden="true">02</div>
-                <strong class="token-label">Access</strong>
-                <p>Priority for high-value researcher contracts and partner opportunities.</p>
+                <strong class="token-label">Buybacks</strong>
+                <p>$SYNA buybacks triggered as the network hits revenue targets from research contracts.</p>
               </div>
               <div class="token-item">
                 <div class="token-num" aria-hidden="true">03</div>
-                <strong class="token-label">Offers</strong>
-                <p>Member access to curated health, diagnostics, and performance benefits.</p>
+                <strong class="token-label">Contract access</strong>
+                <p>Priority access to higher-value research contracts and studies, scaled by how much you hold.</p>
+              </div>
+              <div class="token-item">
+                <div class="token-num" aria-hidden="true">04</div>
+                <strong class="token-label">Member offers</strong>
+                <p>Member-only offers on health, diagnostics, and performance, like discounted bloodwork, panels, and wearables.</p>
               </div>
             </div>
             <p class="fine-print">
-              Token utility is described for product access and network participation. Nothing on this page is financial advice.
+              Token utility is subject to change, with more exact details to be released at company progress milestones. Nothing on this page is financial advice.
             </p>
           </div>
         </div>
@@ -237,7 +242,6 @@
 
       <section class="section closing" id="waitlist" aria-labelledby="waitlist-title">
         <div class="shell closing-inner">
-          <p class="eyebrow">Waitlist</p>
           <h2 id="waitlist-title">The next era of medicine and performance science runs on human data.</h2>
           <p>
             The only question is who owns it when it does. Synapse is the layer that says: you do.
@@ -250,17 +254,34 @@
               <a class="text-link strong" href="https://kickstart.easya.io/token/HA4WtRuNrjtrzAWTTjCyTZn94Jq9ggV6iraW7SndSLyz" target="_blank" rel="noopener">$SYNA</a>
             </div>
             <p class="waitlist-msg" id="waitlist-msg" aria-live="polite"></p>
+            <p class="waitlist-legal">
+              By joining, you agree to receive Synapse updates and accept our
+              <a href="/terms.html">Terms</a> and <a href="/privacy.html">Privacy Policy</a>.
+            </p>
           </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="shell footer-inner">
-        <a class="brand" href="/" aria-label="Synapse home">
-          <span>Synapse</span>
-        </a>
-        <p>Human physiological data, owned by the people who generate it.</p>
+      <div class="shell footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Synapse home">
+            <span>Synapse</span>
+          </a>
+          <p>Human physiological data, owned by the people who generate it.</p>
+          <p class="footer-note">
+            Token utility is subject to change, with more exact details released at company progress milestones. Nothing on this site is financial or medical advice.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="https://x.com/synapseneuro_ai" target="_blank" rel="noopener">X</a>
+          <a href="https://t.me/+Ybt5C2JwsHAyNTY0" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://www.easya.io/" target="_blank" rel="noopener">EasyA</a>
+          <a href="https://dexscreener.com/solana/6znejzejrdj73kknpcnf5zmxkmivmdn5pjhgtcykuvde" target="_blank" rel="noopener">DexScreener</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/privacy.html">Privacy</a>
+        </nav>
       </div>
     </footer>
 

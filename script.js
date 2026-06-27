@@ -2,6 +2,7 @@ const root = document.documentElement;
 const body = document.body;
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
+const localSectionPaths = new Set(["/", "/problem", "/solution", "/interface", "/token", "/waitlist"]);
 
 const savedTheme = window.localStorage.getItem("synapse-theme");
 
@@ -74,7 +75,7 @@ document.addEventListener("click", (event) => {
   if (!anchor) return;
 
   const href = anchor.getAttribute("href");
-  if (!href || href[0] !== "/" || anchor.target === "_blank") return;
+  if (!href || href[0] !== "/" || anchor.target === "_blank" || !localSectionPaths.has(href)) return;
 
   event.preventDefault();
   if (location.pathname !== href) {
@@ -91,6 +92,31 @@ window.addEventListener("popstate", () => {
 // Land on the right section for deep links / refreshes.
 scrollToPath(location.pathname, "instant");
 window.addEventListener("load", () => scrollToPath(location.pathname, "instant"));
+
+// ── Hero: cursor parallax on the data-sphere visual ───────────────────────────
+const heroVisual = document.querySelector("[data-hero-visual]");
+
+if (heroVisual && !prefersReducedMotion()) {
+  let targetX = 0, targetY = 0, curX = 0, curY = 0, parallaxRaf = null;
+
+  function parallaxTick() {
+    curX += (targetX - curX) * 0.08;
+    curY += (targetY - curY) * 0.08;
+    heroVisual.style.setProperty("--px", curX.toFixed(2) + "px");
+    heroVisual.style.setProperty("--py", curY.toFixed(2) + "px");
+    if (Math.abs(targetX - curX) > 0.1 || Math.abs(targetY - curY) > 0.1) {
+      parallaxRaf = requestAnimationFrame(parallaxTick);
+    } else {
+      parallaxRaf = null;
+    }
+  }
+
+  window.addEventListener("pointermove", (e) => {
+    targetX = (e.clientX / window.innerWidth - 0.5) * 36;
+    targetY = (e.clientY / window.innerHeight - 0.5) * 36;
+    if (parallaxRaf === null) parallaxRaf = requestAnimationFrame(parallaxTick);
+  });
+}
 
 // Waitlist form
 const SUPABASE_URL = "https://pczphbjmcbsgrnesqypq.supabase.co";
