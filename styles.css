@@ -280,9 +280,9 @@ body.nav-open .menu-toggle span:last-child {
 .hero-visual {
   position: absolute;
   top: 50%;
-  right: clamp(-140px, -6vw, -30px);
-  width: min(64vw, 760px);
-  height: min(88vh, 760px);
+  right: clamp(-170px, -6vw, -30px);
+  width: clamp(500px, 46vw, 1050px);
+  height: min(88vh, clamp(500px, 46vw, 1050px));
   z-index: 1;
   pointer-events: none;
   transform: translateY(-50%) translate(var(--px, 0px), var(--py, 0px));
